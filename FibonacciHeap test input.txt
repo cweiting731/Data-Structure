@@ -1,0 +1,163 @@
+insert 1
+insert 2
+insert 3
+insert 4
+insert 5
+insert 6
+insert 7
+insert 8
+insert 9
+insert 10
+insert 11
+insert 20
+insert 30
+insert 40
+insert 50
+insert 60
+insert 70
+extract-min
+decrease 70 11
+decrease 60 22
+decrease 50 11
+extract-min
+decrease 59 58
+extract-min
+decrease 39 37
+extract-min
+decrease 20 19
+extract-min
+decrease 11 9
+extract-min
+exit
+
+
+root = insert(root, createNode(1)); rootLength++;
+root = insert(root, createNode(2)); rootLength++;
+root = insert(root, createNode(3)); rootLength++;
+root = insert(root, createNode(4)); rootLength++;
+root = insert(root, createNode(5)); rootLength++;
+root = insert(root, createNode(6)); rootLength++;
+root = insert(root, createNode(7)); rootLength++;
+root = insert(root, createNode(8)); rootLength++;
+root = insert(root, createNode(9)); rootLength++;
+root = insert(root, createNode(10)); rootLength++;
+root = insert(root, createNode(11)); rootLength++;
+root = insert(root, createNode(20)); rootLength++;
+root = insert(root, createNode(30)); rootLength++;
+root = insert(root, createNode(40)); rootLength++;
+root = insert(root, createNode(50)); rootLength++;
+root = insert(root, createNode(60)); rootLength++;
+root = insert(root, createNode(70)); rootLength++;
+root = extract-min
+decrease(root, 70, 11);
+decrease(root, 60, 22);
+decrease(root, 50, 11);
+root = extract-min
+decrease(root, 59, 58);
+root = extract-min
+decrease(root, 39, 37);
+root = extract-min
+decrease(root, 20, 19);
+root = extract-min
+decrease(root, 11, 9);
+root = extract-min
+
+output:
+10 
+30 40 
+3 4 6 38 5 7 8 9
+
+////////////////////////////////////////////////////////////
+insert 10
+insert 2
+insert 5
+insert 3
+extract-min
+extract-min
+extract-min
+exit
+
+root = insert(root, createNode(10)); rootLength++;
+root = insert(root, createNode(2)); rootLength++;
+root = insert(root, createNode(5)); rootLength++;
+root = insert(root, createNode(3)); rootLength++;
+root = extractMin(root);
+root = extractMin(root);
+root = extractMin(root);
+
+output:
+10
+
+////////////////////////////////////////////////////////////
+insert 1
+insert 200
+extract-min
+insert 2
+insert 201
+extract-min
+insert 3
+insert 202
+extract-min
+insert 4
+insert 203
+extract-min
+insert 5
+insert 204
+extract-min
+insert 6
+insert 205
+extract-min
+insert 7
+insert 206
+extract-min
+insert 8
+insert 207
+extract-min
+exit
+
+output:
+200 201 202 204 203 205 206 207
+
+
+////////////////////////////////////////////////////////////
+root = insert(root, createNode(10)); rootLength++;
+root = insert(root, createNode(20)); rootLength++;  
+root = insert(root, createNode(5)); rootLength++;   
+root = insert(root, createNode(3)); rootLength++;
+root = insert(root, createNode(7)); rootLength++;
+root = insert(root, createNode(15)); rootLength++;
+root = insert(root, createNode(18)); rootLength++;
+root = insert(root, createNode(22)); rootLength++;
+root = insert(root, createNode(1)); rootLength++;
+root = insert(root, createNode(12)); rootLength++;
+root = extractMin(root);
+decrease(root, 20, 1);
+root = insert(root, createNode(25)); rootLength++;
+root = insert(root, createNode(30)); rootLength++;
+root = extractMin(root);
+decrease(root, 30, 10);
+root = extractMin(root);
+decrease(root, 25, 4);
+root = insert(root, createNode(8)); rootLength++;
+root = insert(root, createNode(9)); rootLength++;
+root = extractMin(root);
+root = insert(root, createNode(1)); rootLength++;
+root = extractMin(root);
+root = extractMin(root);
+printHeap(root);
+
+
+////////////////////////////////////////////////////////////
+root = insert(root, createNode(10)); rootLength++;
+root = insert(root, createNode(20)); rootLength++;  
+root = insert(root, createNode(5)); rootLength++;   
+root = insert(root, createNode(30)); rootLength++;
+root = insert(root, createNode(25)); rootLength++;
+root = extractMin(root);
+decrease(root, 30, 22);
+root = insert(root, createNode(15)); rootLength++;
+root = insert(root, createNode(12)); rootLength++;
+root = extractMin(root);
+root = delete(root, 12);
+root = extractMin(root);
+printHeap(root);
